@@ -1,0 +1,25 @@
+{
+    "results": [
+    {
+        "name": "Batteries - Alkaline (Primary material production)",
+        "category": "Electrical Equipment",
+        "sector": "Equipment",
+        "source": "BEIS",
+        "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+        "year": "2021",
+        "region": "GB",
+        "region_name": "United Kingdom",
+        "unit": "kg/tonne",
+        "factor": 4633.478261,
+        "factor_calculation_method": "ar4",
+        "factor_calculation_origin": "source",
+        "constituent_gases": {
+            "co2e_total": 4633.478261,
+            "co2e_other": null,
+            "co2": null,
+            "ch4": null,
+            "n2o": null
+        }
+    }
+]
+}

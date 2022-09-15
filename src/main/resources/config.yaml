@@ -1,0 +1,20 @@
+http:
+    port: "![zKvYBLt62jM=]"
+    host: "![xzvqFm8zqef/owKfQA/V9A==]"
+climatiqRequest:
+    host: "![pB2BG1LAF8tDFvTu/N5+VITwm/uDo2/a]"
+    port: "![gqJhEDGne+o=]"
+    protocol: "![SVVQLMV344U=]"
+
+mongodb:
+    user: "![2eiP43oClPE=]"
+    password: "![mGZIpBosakG30MdlrVhesw==]"
+    cluster: "![p7ONFpXYoI3EL1HkWCRjlwXlcOf/JNs5oV0OgephVBc=]"
+    database: "![nCOLB5G3WiHBF9igtbS5Kg==]"
+   
+validation:
+  checkQueryCategory: "Write a category params and year if you want to see result"
+  checkQueryYear: "Query year not null!"
+  trueValidationYear: "Sorry we don`t have any information in this year"
+  querySectorNotNull: "Please write correct validation Params"
+  trueSector: "In this flow we work only with tree sectors. It`s Buildings and Infrastructure,Education and Equipment.Please change your query"

@@ -1,0 +1,39 @@
+{
+    "results": [
+        {
+            "activity_id": "electrical_equipment-type_batteries_alkaline_primary_material_production",
+            "uuid": "758f1e65-bc9a-43d6-93ce-9ab06df68aab",
+            "id": "electrical_equipment-type_batteries_alkaline_primary_material_production",
+            "name": "Batteries - Alkaline (Primary material production)",
+            "category": "Electrical Equipment",
+            "sector": "Equipment",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "GB",
+            "region_name": "United Kingdom",
+            "description": "Emission intensity of batteries - Alkaline (primary material production). The EF should be used to report on consumption of procured materials based on their origin (that is comprised of primary material or recycled materials). For primary materials these factors cover the extraction/primary processing/manufacturing and transportation materials to the point of sale not the materials in use. For secondary materials the factors cover sorting/processing/manufacturing and transportation to the point of sale not the materials in use. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Weight"
+            ],
+            "unit": "kg/tonne",
+            "lca_activity": "cradle_to_gate",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 4633.478261,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 4633.478261,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        }
+    ]
+}

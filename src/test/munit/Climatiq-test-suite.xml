@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<munit:config name="Climatiq-test-suite.xml" />
+	<http:request-config name="HTTP_test_configuration" doc:name="HTTP Request configuration" doc:id="9488b7ca-f55a-49e0-b8a2-aa54b1445153" responseTimeout="60000">
+		<http:request-connection host="0.0.0.0" port="8081"/>
+	</http:request-config>
+	<munit:test name="List-Of-Years" doc:id="989002d8-d93e-46bf-a593-3bcfd1ed105c">
+		<munit:enable-flow-sources >
+			<munit:enable-flow-source value="ListOfYears" />
+		</munit:enable-flow-sources>
+		<munit:behavior >
+			<ee:transform doc:name="List Of Year" doc:id="d59d9459-ab39-45b4-864d-2f46e3268c03" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="Years" ><![CDATA[%dw 2.0
+output application/json
+---
+{"results":["2022","2021","2020","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008"]}]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request List Of Year" doc:id="60921a74-b002-43c0-a55c-24d1bdd5042d" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="GET /All Years" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.Years]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB List Of Year " doc:id="4d4d3693-1f7a-4084-abe4-726bc23bba97" processor="mongo:insert-document">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="/Years" attributeName="collectionName" />
+					<munit-tools:with-attribute whereValue="Insert document" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<flow-ref doc:name="Reference To Flow Year" doc:id="d75a9bf2-98dc-431d-b39c-001083f80a7b" name="ListOfYears"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="Test result" doc:id="c8f55a0d-49d3-4ba5-8c7e-468dd8c09fc5" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Emission-Factors-Choise-Year" doc:id="7c0481b3-b146-488d-8b1e-5290bbf27a58">
+		<munit:behavior >
+			<ee:transform doc:name="Emission Factor By Year" doc:id="6654a4db-0db7-41c0-8407-599ef3795fe6" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="ChoiseEmissionYear" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/ChoiseEmissionYear.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request Emission Factors By Year" doc:id="caa6e3a2-e49a-4120-8afe-4f095be6a781" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="GET /Year" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.ChoiseEmissionYear]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB Emission Factors By Year" doc:id="59c1333e-c292-4d28-812c-c4db697d7804" processor="mongo:insert-document">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Insert document" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="34202c33-2204-4674-85ea-6b4fee4a9738" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Variable Year" doc:id="eb01b6c3-4de4-4175-a5ed-d422f660068e" >
+				<munit:attributes value='#["queryParams":{"year": "2018"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="00d2949d-3035-49fc-b1cc-4b56e6959831" name="EmissionFactories"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test result" doc:id="302349cb-4a04-4d0a-b05f-a1b2ee5dbd60" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Emission-Factors-Choise-Category" doc:id="c31eac1c-680d-4236-acaf-4ffb46bd377b">
+		<munit:behavior >
+			<ee:transform doc:name="Emission Factor By Category" doc:id="6fd96945-095b-4931-bedd-4753e180f585" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="ChoiseEmissionCategory" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/ChoiseEmissionCategory.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request Emission Factors By Category" doc:id="85c85864-6c36-44d9-bfae-41ff6d7ab7fe" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET /Category" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.ChoiseEmissionCategory]" mediaType="application/json" encoding="UTF-8" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB Emission Factors By Category" doc:id="08bf1dd2-c27a-4f73-81c9-934d6da40320" processor="mongo:insert-document">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Insert document" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="34202c33-2204-4674-85ea-6b4fee4a9738" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[payload]" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Variable Category" doc:id="a096f7c8-8866-4e52-a03f-036821c4b510" >
+				<munit:attributes value='#["queryParams":{"category":" Education"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="7783b58c-c075-44af-a721-d197a7a99078" name="EmissionFactories"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test result" doc:id="07a6aae4-18e8-4fd7-9c75-5d151b6f4030" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Emission-Factors-Choise-Category-And-Year" doc:id="e3ff0858-6ee3-43a9-b5b6-fe4c861e2fdd">
+		<munit:behavior >
+			<ee:transform doc:name="Emission Factor By Year And Category" doc:id="14e43915-9b15-4b6e-a790-d0ac86475b48" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="ChoiseEmissionCategoryAndYear" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/ChoiseEmissionCategoryAndYear.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request Emission Factors By Year And Category" doc:id="5ac4983d-b121-4dee-aee6-47fc9d5436b3" processor="http:request" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="GET /Year And Category" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.ChoiseEmissionCategoryAndYear]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB Emission Factors By Year And Category" doc:id="138d5cb8-bde4-4944-849f-e21b1c2514de" processor="mongo:insert-document" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Regions By Category And Year" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="3f46d973-8b5a-4fed-a35f-9a29428489d3" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Variable Year And Category" doc:id="010e6f18-90ab-4156-8941-65d89ebe531f" >
+				<munit:attributes value='#["queryParams":{"category": " Education" , "year": "2018"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="1ce7f5b7-9c59-4859-8e85-f8e522ec2395" name="EmissionFactories"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test result" doc:id="a031e995-6f95-4de0-949b-4edb044de2b0" expression="#[payload]" is="#[MunitTools::notNullValue()]" />
+		</munit:validation>
+	</munit:test>
+	<munit:test name="All-Categories" doc:id="baf262e3-59ab-4075-9bf7-383be848dec1">
+		<munit:behavior >
+			<ee:transform doc:name="ListOfAllCategory" doc:id="c01e034c-6741-4870-a29d-b06c58d1d5bb">
+				<ee:message>
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="Category" ><![CDATA[%dw 2.0
+output application/java
+---
+{"results":["Accommodation","Agriculture/Hunting/Forestry/Fishing","Air Freight","Air Travel","Arable Farming","Building Materials","Ceramic Goods","Chemical Products","Clothing and Footwear","Cloud Computing - CPU","Cloud Computing - Memory","Cloud Computing - Networking","Cloud Computing - Storage","Construction","Construction Waste","Consumer Goods Rental","DIY and Gardening Equipment","Domestic Services","Domestic services","Education","Electrical Equipment","Electrical Waste","Electricity","Electronics","Energy Services","Equipment Rental","Equipment Repair","Fabricated Metal Products","Financial Services","Fishing/Aquaculture/Hunting","Food and Beverage Services","Food and Organic Waste","Food/Beverages/Tobacco","Fuel","Furnishings and Household","General Retail","General Waste","Glass Waste","Glass and Glass Products","Government Activities","Health Care","Health and Social Care","Heat and Steam","Homeworking","Housing","Information and Communication Services","Infrastructure","Insurance Services","Livestock Farming","Machinery","Maintenance and Repair","Manufacturing","Metal Waste","Metals","Mined Materials","Mining","Non-profit Activities","Office Equipment","Office equipment","Operational Activities","Organic Products","Organizational Activities","Other Materials","Paper Products","Paper and Cardboard","Paper and Cardboard Waste","Pavement and Surfacing","Personal Care and Accessories","Plastic Waste","Plastics and Rubber Products","Professional Services and Activities","Professional services","Rail Freight","Rail Travel","Real Estate","Recreation and Culture","Refrigerants and Fugitive Gases","Restaurants and Accommodation","Road Freight","Road Travel","Sea Freight","Sea Travel","Social Care","Textiles","Tickets and Passes","Timber and Forestry Products","Transport Services and Warehousing","Utilities","Vehicle Maintenance and Services","Vehicle Parts","Vehicles","Waste Management","Water Supply","Water Treatment","Wholesale Trade"]}]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request All Category" doc:id="f5a9abfc-a37c-4816-a327-f489cd5bdc64" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="GET /List Of Categories" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[MunitTools::getResourceAsStream('mock/AllCategory.json')]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB All Category" doc:id="b908d4e9-c3af-4fc3-9fce-5bbdab3ee6c8" processor="mongo:insert-document">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="/ListOfCategory" attributeName="collectionName" />
+					<munit-tools:with-attribute whereValue="List Of Category" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="All Categories Flow" doc:id="18ad239b-af20-476f-818a-75ec1dbb000f" name="AllCategories"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test result" doc:id="25ea9d4f-452a-4fb8-a5f4-d78e0ab3a5d2" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test doc:id="1d5fc08c-425b-4b19-8231-36bf5819a50d" name="Regions-By-Category-And-Years">
+		<munit:behavior >
+			<ee:transform doc:name="Regions By Category And Year" doc:id="6be27d56-f439-4540-ad72-56a463d8561b">
+				<ee:message>
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="RegionsByCategoryAndYear" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/RegionsByCategoryAndYear.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request Regions By Category And Year" doc:id="08cfe0cb-5fb1-4d0b-8a55-83bbce45f4d0" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="GET /Regions By Category And Year" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.RegionsByCategoryAndYear]" mediaType="application/json" encoding="UTF-8" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Insert To DB Indo Regions By Category And Year" doc:id="bd35f684-24fe-4e3b-8b86-f44acc6f805c" processor="mongo:insert-document">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Regions By Category And Year" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="3f46d973-8b5a-4fed-a35f-9a29428489d3" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<munit:set-event doc:name="Set Variable Category And Year" doc:id="a112cad2-67da-46a6-8fcf-700361358ab9" >
+				<munit:attributes value='#["queryParams":{"category":" Education","year": 2017}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="17c5b15c-aaed-4ff2-8a18-ec2fe4bc0ac6" name="RegionsByCategoryAndYear"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert-that doc:name="Test result" doc:id="0b593f7f-4a49-468d-8e6a-6630138a247d" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Emission-Factors-Choise-Default" doc:id="19fedfda-b536-4213-8584-f0188e9d1d69">
+		<munit:behavior >
+			<ee:transform doc:name="All Information Emission Factors" doc:id="64b757ba-65cd-4d77-a494-70d24824ef0b" >
+				<ee:message />
+				<ee:variables >
+					<ee:set-variable variableName="ChoiseEmissionCategoryAndYear" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/ChoiseEmissionFactorsDefault.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Request All Information Emission Factors" doc:id="817f9acd-7076-4afb-b085-861988f5d3fe" processor="http:request" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="GET" attributeName="method" />
+					<munit-tools:with-attribute whereValue="All Information Emission Factors" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[MunitTools::getResourceAsStream('mock/ChoiseEmissionFactorsDefault.json')]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit-tools:mock-when doc:name="Write All Information Emission Factors" doc:id="fd97ccdc-d00b-461e-a693-f09ef76508a3" processor="file:write" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Write Info" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="d375d23c-ecf2-475d-8876-b0b92bbb8e04" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<munit:set-null-payload doc:name="Null payload" doc:id="0d5a4aef-0de9-4370-9fea-364b9c647647" />
+			<flow-ref doc:name="Flow Reference" doc:id="5658de5e-f1ad-4e48-b89f-3b43efd681ae" name="EmissionFactories"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test Result" doc:id="feb088b3-be1b-4c6e-a2ce-b70ed50d6709" expression="#[payload]" is="#[MunitTools::notNullValue()]" />
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Search-Choise-Equipment" doc:id="70dff078-1daa-404d-8765-717450026d8e">
+		<munit:behavior >
+			<ee:transform doc:name="All Search Sector Equipment" doc:id="ea0bfea7-ae6b-4d41-ba3b-af885ccba672" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="SearchChoiseEquipment" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/SearchChoiseEquipment.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Insert To DB All Info Sector Equipment" doc:id="ba4dee89-181a-4d67-9132-1d1b58ae0544" processor="mongo:insert-document" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Equipment" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="3032c3d9-2d07-40cd-954e-4aa77513a7e3" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.SearchChoiseEquipment]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution>
+			<munit:set-event doc:name="Set Event" doc:id="d1ac893a-3055-4b2d-9979-2e2cb2e642d0" >
+				<munit:attributes value='#["queryParams":{"sector": "Equipment"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="ff23d4c5-c33c-45a9-aeec-57fd36139c13" name="Search"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test Result" doc:id="474315af-48cf-4a80-bd14-f5e89298e806" is="#[MunitTools::notNullValue()]" expression="#[payload]" />
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Search-Choise-Education" doc:id="7e6039f5-5512-4146-846a-da564c7e6e2f">
+		<munit:behavior >
+			<ee:transform doc:name="All Search Sector Education" doc:id="3c95b83c-6e6c-4b15-a7e8-c34bd97520ca" >
+				<ee:message />
+				<ee:variables >
+					<ee:set-variable variableName="SearchChoiseEducation" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/SearchChoiseEducation.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Insert To DB All Info Sector Educatin" doc:id="29a2d5e0-33f9-4b1a-b31d-e47a9ae3854e" processor="mongo:insert-document" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Education" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="8c169ed5-9c21-41ef-afc7-493a94b537ee" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.SearchChoiseEducation]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Variables Education" doc:id="242fb5d3-1dbf-44d8-9a93-8b52a4572f0e" >
+				<munit:attributes value='#["queryParams":{"sector": "Education"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="50ff19bd-6132-4c79-a25c-360810cae777" name="Search"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test Result" doc:id="02a9ee16-1302-422b-88e0-00c6f22e6036" is="#[MunitTools::notNullValue()]" expression="#[payload]" />
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Search-Choise-Buildings-And-Infrastructure" doc:id="48328f0c-3282-4343-abe7-0e84beb9abf3">
+		<munit:behavior >
+			<ee:transform doc:name="All Search Sector Buildings and Infrastructure" doc:id="e7df5973-f95b-415c-8e14-5ab0df889a48" >
+				<ee:message />
+				<ee:variables >
+					<ee:set-variable variableName="SearchChoiseBuildingsandInfrastructure" ><![CDATA[%dw 2.0
+output application/json
+---
+readUrl("classpath://mock/SearchChoiseBuildingsandInfrastructure.json", "application/json")]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Insert To DB All Info Sector Buildings and Infrastructure" doc:id="a9857a62-0a01-485b-94f4-547a9a7b00fe" processor="mongo:insert-document" >
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Buildings and Infrastructure" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="4056a834-5ae4-4d1d-95ab-0238adcef05f" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[vars.SearchChoiseBuildingsandInfrastructure]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Variables Buildings and Infrastructure" doc:id="57f19791-9d0c-4044-a6d6-021d4b66c55b" >
+				<munit:attributes value='#["queryParams":{"sector":"Buildings and Infrastructure"}]' />
+			</munit:set-event>
+			<flow-ref doc:name="Flow Reference" doc:id="55f84552-cb7c-4cc5-a660-b2c41b01940c" name="Search"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Test Result" doc:id="a283f0d6-22d6-4c98-b650-8442d9670084" is="#[MunitTools::notNullValue()]" expression="#[payload]" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

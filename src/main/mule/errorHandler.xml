@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<error-handler name="VALIDATION_CATEGORY" doc:id="68f455bb-eae4-4e47-881d-10b0730d7bb3" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="7753696e-312e-4aab-9b58-7b9f99a56af0" type="APP:CATEGORYNULL" >
+			<ee:transform doc:name="Category" doc:id="b51e6a1d-115b-4854-a2b3-ed757906e104" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Invalid category"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[400]" doc:name="httpStatus" doc:id="9d5238ee-e791-4579-96b2-761d4a534d6a" variableName="httpStatus" />
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="Copy_of_On Error Propagate" doc:id="0d691d93-01e4-4240-bbf8-3bb5e1a52997" type="APP:YEARNULL" >
+			<ee:transform doc:name="Year" doc:id="3080d93c-af25-4024-a905-586f18f0e826" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Invalid year"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[400]" doc:name="httpStatus" doc:id="2656dc61-5a73-48ef-b8f7-412f4134c52a" variableName="httpStatus" />
+		</on-error-propagate>
+	</error-handler>
+	<error-handler name="VALIDATION_SEARCH" doc:id="9b378f50-8593-4123-90af-0b052cae35e7" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="f03c189a-1fa1-4a8f-98d5-84aec7624d06" type="APP:FALSEDATA" >
+			<ee:transform doc:name="Sector Write Or Not" doc:id="0024cfc5-b024-42db-aa34-ea28d0ac7589" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[output application/json
+---
+{
+	message: "'In this flow we work only with tree sectors. It`s Buildings and Infrastructure,Education and Equipment.Please change your query'"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[400]" doc:name="httpStatus" doc:id="171b0017-a979-4a42-bdbe-7f3269ee3eef" variableName="httpStatus" />
+		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="Copy_of_On Error Propagate" doc:id="d6dd241a-914d-439f-ac53-346e8818e916" type="APP:SECTORNULL" >
+			<ee:transform doc:name="Sector" doc:id="c78b4b57-8e61-4aa6-bece-f08023c3def7" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Invalid data of sector"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[400]" doc:name="httpStatus" doc:id="b241b0aa-c681-417a-aa0a-6cee3361bdc7" variableName="httpStatus"/>
+		</on-error-propagate>
+	</error-handler>
+	<error-handler name="EMISSIONFACTORS_FLOW" doc:id="4d6b427f-a7ca-49cc-b28d-0cb7fb3044b4" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="a5ca83b1-4787-422c-834c-c524fe34a911" type="APP:TRUE/FALSEYEAR" >
+			<ee:transform doc:name="Year" doc:id="374a3c06-3a3f-4c2a-9765-a0f1005892b0" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Invalid data of YEAR"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[400]" doc:name="httpStatus" doc:id="e6522c72-d3bd-4f2d-9aa7-1751ea823e7b" variableName="httpStatus" />
+		</on-error-propagate>
+	</error-handler>
+</mule>

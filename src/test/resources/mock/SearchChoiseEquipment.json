@@ -1,0 +1,424 @@
+{
+  "results": [
+    {
+      "name": "Batteries - Alkaline (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+      "year": "2021",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 4633.478261,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 4633.478261,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Batteries - Alkaline (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+      "year": "2022",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 4633.47826,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 4633.47826,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Batteries - Li ion (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+      "year": "2021",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 6308.0,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 6308.0,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Batteries - Li ion (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+      "year": "2022",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 6308.0,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 6308.0,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Batteries - NiMh (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+      "year": "2021",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 28380.0,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 28380.0,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Batteries - NiMh (Primary material production)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "BEIS",
+      "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+      "year": "2022",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/tonne",
+      "factor": 28380.0,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 28380.0,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Carbon and graphite products",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EPA",
+      "source_link": "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=https://doi.org/10.23719/1517796",
+      "year": "2020",
+      "region": "US",
+      "region_name": "United States",
+      "unit": "kg/USD",
+      "factor": 0.231,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.231,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Communication and energy wire and cable",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EPA",
+      "source_link": "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=https://doi.org/10.23719/1517796",
+      "year": "2020",
+      "region": "US",
+      "region_name": "United States",
+      "unit": "kg/USD",
+      "factor": 0.445,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.445,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AT",
+      "region_name": "Austria",
+      "unit": "kg/EUR",
+      "factor": 0.2921,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2921,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AU",
+      "region_name": "Australia",
+      "unit": "kg/EUR",
+      "factor": 0.3316,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.3316,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BE",
+      "region_name": "Belgium",
+      "unit": "kg/EUR",
+      "factor": 0.253,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.253,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BG",
+      "region_name": "Bulgaria",
+      "unit": "kg/EUR",
+      "factor": 0.9734,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.9734,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BR",
+      "region_name": "Brazil",
+      "unit": "kg/EUR",
+      "factor": 0.6007,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.6007,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CA",
+      "region_name": "Canada",
+      "unit": "kg/EUR",
+      "factor": 0.5103,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.5103,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CH",
+      "region_name": "Switzerland",
+      "unit": "kg/EUR",
+      "factor": 0.2188,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2188,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CN",
+      "region_name": "China",
+      "unit": "kg/EUR",
+      "factor": 1.192,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 1.192,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CY",
+      "region_name": "Cyprus",
+      "unit": "kg/EUR",
+      "factor": 0.2889,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2889,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CZ",
+      "region_name": "Czech Republic",
+      "unit": "kg/EUR",
+      "factor": 0.6074,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.6074,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DE",
+      "region_name": "Germany",
+      "unit": "kg/EUR",
+      "factor": 0.2549,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2549,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Electrical machinery and apparatus (not elsewhere specified)",
+      "category": "Electrical Equipment",
+      "sector": "Equipment",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DK",
+      "region_name": "Denmark",
+      "unit": "kg/EUR",
+      "factor": 0.2846,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2846,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    }
+  ]
+}

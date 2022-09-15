@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_3b992fc9_dcdf_4a20_bf90_cea477f88eda_Input_Variables_region = Any
+

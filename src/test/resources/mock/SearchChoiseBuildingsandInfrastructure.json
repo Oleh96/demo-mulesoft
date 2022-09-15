@@ -1,0 +1,430 @@
+{
+  "results": [
+    {
+      "name": "Commercial structures/including farm structures",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EPA",
+      "source_link": "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=https://doi.org/10.23719/1517796",
+      "year": "2020",
+      "region": "US",
+      "region_name": "United States",
+      "unit": "kg/USD",
+      "factor": 0.289,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.289,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AT",
+      "region_name": "Austria",
+      "unit": "kg/EUR",
+      "factor": 0.2678,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2678,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AU",
+      "region_name": "Australia",
+      "unit": "kg/EUR",
+      "factor": 0.4949,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.4949,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BE",
+      "region_name": "Belgium",
+      "unit": "kg/EUR",
+      "factor": 0.3221,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.3221,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BG",
+      "region_name": "Bulgaria",
+      "unit": "kg/EUR",
+      "factor": 1.021,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 1.021,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BR",
+      "region_name": "Brazil",
+      "unit": "kg/EUR",
+      "factor": 0.5169,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.5169,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CA",
+      "region_name": "Canada",
+      "unit": "kg/EUR",
+      "factor": 0.2881,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2881,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CH",
+      "region_name": "Switzerland",
+      "unit": "kg/EUR",
+      "factor": 0.1779,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1779,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CN",
+      "region_name": "China",
+      "unit": "kg/EUR",
+      "factor": 1.6356,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 1.6356,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CY",
+      "region_name": "Cyprus",
+      "unit": "kg/EUR",
+      "factor": 0.7368,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.7368,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CZ",
+      "region_name": "Czech Republic",
+      "unit": "kg/EUR",
+      "factor": 0.397,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.397,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DE",
+      "region_name": "Germany",
+      "unit": "kg/EUR",
+      "factor": 0.4011,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.4011,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DK",
+      "region_name": "Denmark",
+      "unit": "kg/EUR",
+      "factor": 0.2706,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2706,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "EE",
+      "region_name": "Estonia",
+      "unit": "kg/EUR",
+      "factor": 0.6019,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.6019,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "ES",
+      "region_name": "Spain",
+      "unit": "kg/EUR",
+      "factor": 0.2483,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2483,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "FI",
+      "region_name": "Finland",
+      "unit": "kg/EUR",
+      "factor": 0.3144,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.3144,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "FR",
+      "region_name": "France",
+      "unit": "kg/EUR",
+      "factor": 0.2332,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2332,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/EUR",
+      "factor": 0.1673,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1673,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "GR",
+      "region_name": "Greece",
+      "unit": "kg/EUR",
+      "factor": 0.7683,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.7683,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Construction work",
+      "category": "Construction",
+      "sector": "Buildings and Infrastructure",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "HR",
+      "region_name": "Croatia",
+      "unit": "kg/EUR",
+      "factor": 0.5133,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.5133,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    }
+  ]
+}
+
+
+
+
+
+

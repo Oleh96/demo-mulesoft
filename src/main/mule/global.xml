@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:slack="http://www.mulesoft.org/schema/mule/slack" xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:mongo="http://www.mulesoft.org/schema/mule/mongo" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mongo/current/mule-mongo.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
+http://www.mulesoft.org/schema/mule/slack http://www.mulesoft.org/schema/mule/slack/current/mule-slack.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f80b68fb-3744-4adc-ab12-72612b72b2c1" >
+		<http:listener-connection host="${secure::http.host}" port="${secure::http.port}"/>
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="a15f6eef-b842-4349-b5a6-00a160424323" responseTimeout="60000">
+		<http:request-connection host="${secure::climatiqRequest.host}"/>
+	</http:request-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="f56a7ad8-192c-4718-ad4c-1b3038c6d578" file="config.yaml" />
+	<validation:config name="Validation_Config" doc:name="Validation Config" doc:id="df3007ec-3034-4621-aff1-ab81c9e3676a" />
+	<mongo:config name="MongoDB_Config" doc:name="MongoDB Config" doc:id="54642a40-3962-471d-880d-d3e40d9b76fd" >
+		<mongo:connection-string-connection connectionString="mongodb+srv://${secure::mongodb.user}:${secure::mongodb.password}@cluster0.xulnyww.mongodb.net/test" />
+	</mongo:config>
+	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="18560ba8-4c19-4944-ae4a-c04489a672c9" file="config.yaml" key="tutorialspedia">
+		<secure-properties:encrypt algorithm="Blowfish" />
+	</secure-properties:config>
+</mule>

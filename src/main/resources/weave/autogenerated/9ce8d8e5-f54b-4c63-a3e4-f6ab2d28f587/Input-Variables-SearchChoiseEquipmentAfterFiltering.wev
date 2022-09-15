@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_9ce8d8e5_f54b_4c63_a3e4_f6ab2d28f587_Input_Variables_SearchChoiseEquipmentAfterFiltering = Any
+

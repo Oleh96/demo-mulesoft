@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:slack="http://www.mulesoft.org/schema/mule/slack" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:mongo="http://www.mulesoft.org/schema/mule/mongo"
+	xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mongo/current/mule-mongo.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/slack http://www.mulesoft.org/schema/mule/slack/current/mule-slack.xsd">
+	<flow name="ListOfYears" doc:id="389548b2-c91a-460c-8162-3d36ba02cf96" >
+		<flow-ref doc:name="Start Log" doc:id="733f3ebb-2f29-4b67-abab-9445db012cbb" name="StartLog"/>
+		<http:request method="GET" doc:name="GET /All Years" doc:id="ba306b03-3b1a-42c6-b33c-532c4cb5cca9" config-ref="HTTP_Request_configuration" path="/emission-factors/years">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	"results" : vars.results
+}]]]></http:query-params>
+		</http:request>
+		<mongo:insert-document collectionName="/Years" doc:name="List Of Years" doc:id="02ee556e-4b58-4c9f-abf8-117ce8b90059" config-ref="MongoDB_Config"/>
+		<flow-ref doc:name="End Log" doc:id="ccfc84b4-1b66-4d33-ac7b-584299550293" name="EndLog" />
+	</flow>
+	<sub-flow name="AllCategories" doc:id="a9197635-98c9-40b7-9378-ab2ec73bfd38" >
+		<flow-ref doc:name="Start Log" doc:id="be498426-91cc-4ae1-9cae-857b4da5981d" name="StartLog" />
+		<http:request method="GET" doc:name="GET /List Of Categories" doc:id="7cc44d6c-6d8b-4b2e-9c03-7ddaf25c1c10" config-ref="HTTP_Request_configuration" path="/emission-factors/categories">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	"results" : vars.results
+}]]]></http:query-params>
+		</http:request>
+		<mongo:insert-document collectionName="/ListOfCategory" doc:name="List Of Category" doc:id="2f1a0ab3-2b9d-42b3-bc7a-0442347a056a" config-ref="MongoDB_Config"/>
+		<flow-ref doc:name="End Log" doc:id="c1970ca6-dca5-433a-9246-75e253d69bec" name="EndLog" />
+	</sub-flow>
+	<sub-flow name="RegionsByCategoryAndYear" doc:id="cf036019-9aa0-4f4f-b1ea-079422ebc412">
+		<flow-ref doc:name="Start Log" doc:id="b3a92f8f-9e00-44ba-a3ab-763dfe65cf11" name="StartLog" />
+		<set-variable value="#[message.attributes.queryParams.category]" doc:name="category" doc:id="04302e87-1636-42e5-878e-2ec366926565" variableName="category" />
+		<validation:is-not-null doc:name="Check Query Category" doc:id="8d0409ed-f26d-4d9c-b373-8fd02e5fe617" value="#[vars.category]" message='${validation.checkQueryCategory}' config-ref="Validation_Config">
+			<error-mapping sourceType="VALIDATION:NULL" targetType="APP:CATEGORYNULL" />
+		</validation:is-not-null>
+		<set-variable value="#[message.attributes.queryParams.year]" doc:name="year" doc:id="8c1c8034-ea90-46c7-a53d-c9d5aa961fd8" variableName="year" />
+		<flow-ref doc:name="Check Collection" doc:id="105aea37-fac4-486e-b12e-29e339e78670" name="CheckRegionsCollection" />
+		<validation:is-not-null doc:name="Check Query Year" doc:id="4a7c5178-8b90-4124-8773-3df87628323d" value="#[vars.year]" config-ref="Validation_Config" message="${validation.checkQueryYear}">
+			<error-mapping sourceType="VALIDATION:NULL" targetType="APP:YEARNULL" />
+		</validation:is-not-null>
+		<http:request method="GET" doc:name="GET /Regions By Category And Year" doc:id="32854575-71bf-4c0a-b947-590244704625" config-ref="HTTP_Request_configuration" path="/emission-factors/regions">
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+			<http:query-params><![CDATA[#[output application/java
+---
+{
+	"category" : vars.category,
+	"year" : vars.year
+}]]]></http:query-params>
+		</http:request>
+		<mongo:insert-document doc:name="Regions By Category And Year" doc:id="3f46d973-8b5a-4fed-a35f-9a29428489d3" config-ref="MongoDB_Config" collectionName="/Regions" />
+		<flow-ref doc:name="End Log" doc:id="fadc9595-f688-47e7-946e-cc0755e487e2" name="EndLog" />
+	</sub-flow>
+	<flow name="EmissionFactories" doc:id="b09cf839-ae08-4e7a-9138-536d48a8e052">
+		<flow-ref doc:name="Start Log" doc:id="ec570251-4066-45fa-ab2c-e829b3cda0a8" name="StartLog" />
+		<set-variable value="#[message.attributes.queryParams.year]" doc:name="year" doc:id="74edc90e-999c-43dd-bb02-d5b84975d72b" variableName="year" />
+		<choice doc:name="Choice" doc:id="9f994550-59da-4a63-a2ad-4a1bd83c11e0">
+			<when expression="#[(not isEmpty(vars.year))]">
+				<validation:is-true doc:name="Validation Year" doc:id="895d7245-3003-4b00-8dfc-850ce7942def" expression='#[["2022","2021","2020","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008"] contains vars.year]' message="${validation.trueValidationYear}" config-ref="Validation_Config">
+					<error-mapping sourceType="VALIDATION:INVALID_BOOLEAN" targetType="APP:TRUE/FALSEYEAR" />
+				</validation:is-true>
+			</when>
+			<otherwise>
+				<flow-ref doc:name="End Log" doc:id="5d39de0f-476c-4160-a3dc-f1e22b1660f7" name="EndLog" />
+			</otherwise>
+		</choice>
+		<set-variable value="#[message.attributes.queryParams.category]" doc:name="category" doc:id="2d69968a-4e0b-4f08-867f-083bf861bd24" variableName="category" />
+		<choice doc:name="Choice" doc:id="02a75573-38c0-40d8-bdd9-10459e74c521">
+			<when expression="#[(not isEmpty(vars.year)) and isEmpty(vars.category)]">
+				<flow-ref doc:name="Start Log" doc:id="3843e716-cd80-4e59-b999-6dc0daf7eadf" name="StartLog" />
+				<http:request method="GET" doc:name="GET /Year" doc:id="15e5d2f7-ec59-401b-886c-741b23152a98" config-ref="HTTP_Request_configuration" path="/emission-factors">
+					<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+					<http:query-params><![CDATA[#[output application/java
+---
+{
+	"year" : vars.year
+}]]]></http:query-params>
+				</http:request>
+				<flow-ref doc:name="TransforEmissionFactoriesList(OrderBy-factory)" doc:id="74102fff-a190-4343-b0bc-b13435488b38" name="TransforEmissionFactoriesList(OrderBy-factory)" />
+				<flow-ref doc:name="Format JSON" doc:id="d2caa1b4-2c70-4c96-aeaf-13280aeb2d6b" name="FormatJSONForDocument"/>
+				<mongo:insert-document doc:name="Insert document" doc:id="34202c33-2204-4674-85ea-6b4fee4a9738" config-ref="MongoDB_Config" collectionName="/EmissionFactors(byYear)" />
+			</when>
+			<when expression="#[isEmpty(vars.year) and (not isEmpty(vars.category))]">
+				<flow-ref doc:name="Start Log" doc:id="257339ef-2a57-4ce0-b5bd-10c076f5ae67" name="StartLog" />
+				<http:request method="GET" doc:name="GET /Category" doc:id="2ea15082-ecd1-42f6-a8cc-301b6a5a0e0a" config-ref="HTTP_Request_configuration" path="/emission-factors">
+					<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+					<http:query-params><![CDATA[#[output application/java
+---
+{
+	"category" : vars.category
+}]]]></http:query-params>
+				</http:request>
+				<flow-ref doc:name="TransforEmissionFactoriesList(OrderBy-factory)" doc:id="7fd59ec7-aee3-4305-bd79-ac8cc919c721" name="TransforEmissionFactoriesList(OrderBy-factory)" />
+				<flow-ref doc:name="Format JSON" doc:id="544144c4-677c-4075-b854-c5ff25d6f530" name="FormatJSONForDocument" />
+				<mongo:insert-document doc:name="Insert document" doc:id="10f758c0-a093-4144-abbd-eca82f438dcd" config-ref="MongoDB_Config" collectionName="/CategoryEmissionFactors" />
+			</when>
+			<when expression="#[(not isEmpty(vars.year)) and (not isEmpty(vars.category))]">
+				<flow-ref doc:name="Start Log" doc:id="f1e7733f-c235-4cc9-bf91-5e59355ddf64" name="StartLog" />
+				<http:request method="GET" doc:name="GET /Year And Category" doc:id="cdf4f47e-0bbf-49d5-a866-6b12f26a83e5" config-ref="HTTP_Request_configuration" path="/emission-factors">
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+			<http:query-params><![CDATA[#[output application/java
+---
+{
+	"category" : vars.category,
+	"year" : vars.year
+}]]]></http:query-params>
+		</http:request>
+				<flow-ref doc:name="TransforEmissionFactoriesList(OrderBy-factory)" doc:id="4ef6eecf-4959-457f-aa86-8c09354e1ad2" name="TransforEmissionFactoriesList(OrderBy-factory)" />
+				<flow-ref doc:name="Format JSON" doc:id="30a8b96e-6bb0-409d-ad96-6043022387f0" name="FormatJSONForDocument" />
+				<mongo:insert-document doc:name="Insert document" doc:id="e0a9eade-571e-416a-87d4-faa7996f09e6" config-ref="MongoDB_Config" collectionName="/YearsCategoryrEmisionFactors" />
+			</when>
+			<otherwise>
+				<flow-ref doc:name="Start Log" doc:id="bd31aeb7-e02d-41f2-8772-8bd3ffb4a0c5" name="StartLog" />
+				<http:request method="GET" doc:name="All Information Emission Factors" doc:id="bbfcba19-2110-4441-9cb1-49459c3b615d" config-ref="HTTP_Request_configuration" path="/emission-factors">
+					<http:headers><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+				</http:request>
+				<file:write doc:name="Write Info" doc:id="d375d23c-ecf2-475d-8876-b0b92bbb8e04" path="C:\DEMO\New Zeland.json" />
+			</otherwise>
+		</choice>
+		<flow-ref doc:name="End Log" doc:id="9a62b026-116c-4e92-85ff-16fd70543fd2" name="EndLog" />
+	</flow>
+	<sub-flow name="FormatJSONForDocument" doc:id="bc0d42ff-13fd-48be-8a38-4763e3a5cfe9">
+		<ee:transform doc:name="Format JSON" doc:id="2760ceb5-e43d-4b2b-92b2-e69d137fd5c8">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{(payload)}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+	<sub-flow name="TransforEmissionFactoriesList(OrderBy-factory)" doc:id="3b992fc9-dcdf-4a20-bf90-cea477f88eda" >
+		<ee:transform doc:name="To JSON (Correct Data) And OrderBY" doc:id="0fb72e99-16a8-4fae-9deb-506bb2a3cf05">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload.results map (( result , indexOfResult ) -> {
+	sysId: result.sysId,
+	activity_id: result.activity_id,
+	uuid: result.uuid,
+	id: result.id,
+	name: result.name,
+	category: result.category,
+	sector: result.sector,
+	source: result.source,
+	source_link: result.source_link,
+	uncertainty: result.uncertainty,
+	year: result.year,
+	region: result.region,
+	region_name: result.region_name,
+	description: result.description,
+	unit_type: result.unit_type map ( unittype , indexOfUnittype ) -> unittype,
+	factor: result.factor,
+	factor_calculation_method: result.factor_calculation_method,
+	factor_calculation_origin: result.factor_calculation_origin,
+	constituent_gases: result.constituent_gases
+}) orderBy $.factor]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+	<flow name="Search" doc:id="9ce8d8e5-f54b-4c63-a3e4-f6ab2d28f587" >
+		<flow-ref doc:name="Start Log" doc:id="6883ce72-0063-47e7-bd40-db02f05610a6" name="StartLog"/>
+		<set-variable value="#[message.attributes.queryParams.sector]" doc:name="sector" doc:id="b4f86848-d6b7-498e-9a9f-639472024b41" variableName="sector" />
+		<flow-ref doc:name="CheackCollection" doc:id="60621ea3-b43f-4768-a918-112f05eb885c" name="CheckSearchCollection"/>
+		<validation:is-not-null doc:name="Check Query Sector" doc:id="c9c2b3bd-fa9c-4138-bfab-bfdee2945d72" value="#[vars.sector]" message="${validation.querySectorNotNull}" config-ref="Validation_Config">
+			<error-mapping sourceType="VALIDATION:NULL" targetType="APP:SECTORNULL" />
+		</validation:is-not-null>
+		<http:request method="GET" doc:name="GET /Search" doc:id="24ca3ed8-196b-45ac-8197-69c2c60f9585" config-ref="HTTP_Request_configuration" path="/search">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	Authorization : "Bearer F6RCMZZN6AM60PPG169DV87YH4CP"
+}]]]></http:headers>
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	"sector" : vars.sector
+}]]]></http:query-params>
+		</http:request>
+		<validation:is-true doc:name="Check True Query Sector" doc:id="dabf7c11-a6ff-4681-ba6f-b0aa24f0852b" expression="#[['Buildings and Infrastructure','Education','Equipment'] contains vars.sector]" message="${validation.trueSector}" config-ref="Validation_Config">
+			<error-mapping sourceType="VALIDATION:INVALID_BOOLEAN" targetType="APP:FALSEDATA" />
+		</validation:is-true>
+		<choice doc:name="Choice" doc:id="f69088d1-dc18-47c6-9e9d-cd8052c02baa" >
+			<when expression='#[vars.sector == "Equipment"]'>
+				<flow-ref doc:name="Transform Data for Search" doc:id="59476b11-ee81-4346-ac60-0f1a90a20e9f" name="InfoSearch"/>
+				<flow-ref doc:name="Filter Data Search" doc:id="c695f0dc-c870-4095-aaca-ee9b16542323" name="FilterDataSearch" />
+				<flow-ref doc:name="After Format JSON" doc:id="35b08794-3a11-4562-85f3-6aff3c498d69" name="FormatJSONForDocument"/>
+				<mongo:insert-document collectionName="/Search" doc:name="Equipment" doc:id="3032c3d9-2d07-40cd-954e-4aa77513a7e3" config-ref="MongoDB_Config" />
+			</when>
+			<when expression='#[vars.sector == "Education"]'>
+				<flow-ref doc:name="Transform Data for Search" doc:id="fa7138e5-c421-4a98-94a0-62b8fff8d4d9" name="InfoSearch"/>
+				<flow-ref doc:name="Filter Data Search" doc:id="9a17831b-7d5f-4fe9-92ad-6c3c65090c7d" name="FilterDataSearch" />
+				<flow-ref doc:name="After Format JSON" doc:id="73de0289-cd61-47a7-88a6-a332485d8280" name="FormatJSONForDocument"/>
+				<mongo:insert-document collectionName="/Search" doc:name="Education" doc:id="8c169ed5-9c21-41ef-afc7-493a94b537ee" config-ref="MongoDB_Config" />
+			</when>
+			<when expression='#[vars.sector == "Buildings and Infrastructure"]'>
+				<flow-ref doc:name="Transform Data for Search" doc:id="52ccdd19-f79b-4231-9a8e-53b7580f614e" name="InfoSearch"/>
+				<flow-ref doc:name="Filter Data Search" doc:id="fb387b7e-8d9b-46ab-8e41-d79b45a4760e" name="FilterDataSearch" />
+				<flow-ref doc:name="After Format JSON" doc:id="0704afff-59c2-4d43-94cc-d280d8950cc8" name="FormatJSONForDocument"/>
+				<mongo:insert-document collectionName="/Search" doc:name="Buildings and Infrastructure" doc:id="4056a834-5ae4-4d1d-95ab-0238adcef05f" config-ref="MongoDB_Config" />
+			</when>
+			<otherwise >
+				<flow-ref doc:name="End Log" doc:id="85409792-2768-4dbd-bcc9-59756c74e8fb" name="EndLog"/>
+			</otherwise>
+		</choice>
+		<flow-ref doc:name="End Log" doc:id="db166c70-7fd8-4803-a88b-9930bfeb2ea3" name="EndLog" />
+	</flow>
+	<sub-flow name="FilterDataSearch" doc:id="ade209c9-b544-432f-a594-eba76397504c">
+		<ee:transform doc:name="Filter Data By Year And Region" doc:id="ccb048d1-8a0d-4a22-beb4-663fc6874b02">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload.results filter(($.year == '2021') and ($.region_name == 'United Kingdom'))]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+	<sub-flow name="InfoSearch" doc:id="2f6614b7-de77-4a0b-b651-52c8f97f8d3b">
+		<ee:transform doc:name="Sector Info" doc:id="4da6cdde-99c7-4761-aaba-9947177d33f1">
+					<ee:message>
+						<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	results: payload.results map ( result , indexOfResult ) -> {
+		name: result.name,
+		category: result.category,
+		sector: result.sector,
+		source: result.source,
+		source_link: result.source_link,
+		year: result.year,
+		region: result.region,
+		region_name: result.region_name,
+		unit: result.unit,
+		factor: result.factor,
+		factor_calculation_method: result.factor_calculation_method,
+		factor_calculation_origin: result.factor_calculation_origin,
+		constituent_gases: result.constituent_gases
+	}
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+	</sub-flow>
+	<sub-flow name="EndLog" doc:id="3def39ac-579a-4061-be1e-00922d916ea1" >
+		<logger level="INFO" doc:name="End Log" doc:id="52d60ab4-14ea-4e64-b174-b935633efc40" message="Finishing some action in flow and Exit"/>
+	</sub-flow>
+	<sub-flow name="CheckSearchCollection" doc:id="9c23ce4b-ef0b-41a7-87f4-eb5e1daed1e5" >
+		<flow-ref doc:name="Start Log" doc:id="45e18764-b7bc-4269-9a44-1388f87a78ef" name="StartLog"/>
+		<mongo:collection-exists doc:name="SearchCollection" doc:id="02d57fa9-91b4-45ec-a71d-44982f815921" config-ref="MongoDB_Config" collectionName="/Search"/>
+		<choice doc:name="Choice" doc:id="235c0dbc-bebd-4b6a-a46b-9de0c125dda5" >
+			<when expression='#[vars.SearchCollection == false]'>
+				<mongo:create-collection doc:name="Create Search Collection" doc:id="7ea24f2b-4a7d-42d8-a369-a63869cdc8b0" config-ref="MongoDB_Config" collectionName="/Search"/>
+			</when>
+			<otherwise>
+				<logger level="INFO" doc:name="Search Collection Exist" doc:id="ba10174d-1926-43eb-9f9a-e30c749be189" message="#[&quot;Collection 'Search' exist!&quot;]"/>
+			</otherwise>
+		</choice>
+		<flow-ref doc:name="End Log" doc:id="c20938e0-9c12-4f6f-beb5-c5f68f400865" name="EndLog"/>
+	</sub-flow>
+	<sub-flow name="StartLog" doc:id="4092a58d-616a-4089-95d4-0806d856e2da" >
+		<logger level="INFO" doc:name="Star Log" doc:id="897a6efb-452b-4a3e-8ed0-5e4afa851858" message="Entering into flow" />
+	</sub-flow>
+	<sub-flow name="CheckRegionsCollection" doc:id="f6fd0b3c-1333-4391-aa08-5a7d017c0fd0" >
+		<flow-ref doc:name="Start Log" doc:id="397f8979-7f53-46fd-892c-23d3dea81353" name="StartLog" />
+		<mongo:collection-exists collectionName="/Regions" doc:name="RegionsCollection" doc:id="9201d91b-555e-42e2-9c86-1149d404a5da" config-ref="MongoDB_Config" />
+		<choice doc:name="Copy_of_Choice" doc:id="35eb1d8a-b97e-41ca-bd1b-217dc1019b42" >
+			<when expression='#[vars.RegionsCollection == false]' >
+				<mongo:create-collection doc:name="Create Regions Collection" doc:id="1ad1654e-19da-4617-983b-cdd70a1f1941" config-ref="MongoDB_Config" collectionName="/Regions" />
+			</when>
+			<otherwise >
+				<logger level="INFO" doc:name="Regions Collection Exist" doc:id="874a455d-d409-4dfb-8618-b87ce30b4728" message="#[&quot;Collection 'Regions' exist!&quot;]" />
+			</otherwise>
+		</choice>
+		<flow-ref doc:name="End Log" doc:id="44f83407-eec8-4753-a195-b4ca2284ef47" name="EndLog" />
+	</sub-flow>
+</mule>

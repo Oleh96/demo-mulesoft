@@ -1,0 +1,430 @@
+{
+  "results": [
+    {
+      "name": "Colleges/universities/junior colleges and professional schools",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EPA",
+      "source_link": "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=https://doi.org/10.23719/1517796",
+      "year": "2020",
+      "region": "US",
+      "region_name": "United States",
+      "unit": "kg/USD",
+      "factor": 0.196,
+      "factor_calculation_method": "ar4",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.196,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AT",
+      "region_name": "Austria",
+      "unit": "kg/EUR",
+      "factor": 0.0665,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0665,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "AU",
+      "region_name": "Australia",
+      "unit": "kg/EUR",
+      "factor": 0.1601,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1601,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BE",
+      "region_name": "Belgium",
+      "unit": "kg/EUR",
+      "factor": 0.0326,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0326,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BG",
+      "region_name": "Bulgaria",
+      "unit": "kg/EUR",
+      "factor": 0.1272,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1272,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "BR",
+      "region_name": "Brazil",
+      "unit": "kg/EUR",
+      "factor": 0.1298,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1298,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CA",
+      "region_name": "Canada",
+      "unit": "kg/EUR",
+      "factor": 0.1061,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1061,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CH",
+      "region_name": "Switzerland",
+      "unit": "kg/EUR",
+      "factor": 0.0494,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0494,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CN",
+      "region_name": "China",
+      "unit": "kg/EUR",
+      "factor": 0.2386,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.2386,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CY",
+      "region_name": "Cyprus",
+      "unit": "kg/EUR",
+      "factor": 0.0862,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0862,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "CZ",
+      "region_name": "Czech Republic",
+      "unit": "kg/EUR",
+      "factor": 0.1682,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1682,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DE",
+      "region_name": "Germany",
+      "unit": "kg/EUR",
+      "factor": 0.063,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.063,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "DK",
+      "region_name": "Denmark",
+      "unit": "kg/EUR",
+      "factor": 0.1951,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1951,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "EE",
+      "region_name": "Estonia",
+      "unit": "kg/EUR",
+      "factor": 0.1898,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1898,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "ES",
+      "region_name": "Spain",
+      "unit": "kg/EUR",
+      "factor": 0.0585,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0585,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "FI",
+      "region_name": "Finland",
+      "unit": "kg/EUR",
+      "factor": 0.1044,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.1044,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "FR",
+      "region_name": "France",
+      "unit": "kg/EUR",
+      "factor": 0.0656,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0656,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "GB",
+      "region_name": "United Kingdom",
+      "unit": "kg/EUR",
+      "factor": 0.0528,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0528,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "GR",
+      "region_name": "Greece",
+      "unit": "kg/EUR",
+      "factor": 0.0525,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0525,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    },
+    {
+      "name": "Education services",
+      "category": "Education",
+      "sector": "Education",
+      "source": "EXIOBASE",
+      "source_link": "https://zenodo.org/record/5589597#.Yh9_Zi8w1ao",
+      "year": "2021",
+      "region": "HR",
+      "region_name": "Croatia",
+      "unit": "kg/EUR",
+      "factor": 0.0854,
+      "factor_calculation_method": "ar5",
+      "factor_calculation_origin": "source",
+      "constituent_gases": {
+        "co2e_total": 0.0854,
+        "co2e_other": null,
+        "co2": null,
+        "ch4": null,
+        "n2o": null
+      }
+    }
+  ]
+}
+
+
+
+
+
+

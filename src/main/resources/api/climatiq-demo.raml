@@ -1,0 +1,99 @@
+#%RAML 1.0
+title: Climatiq Demo
+
+baseUri: https://beta3.api.climatiq.io/emission-factors
+mediaType: 
+- application/json
+description: The Climatiq API is designed to help developers build tools to automate calculation of the environmental impact of any business or organisation's activity
+types:
+  Climatiq: !include /DAtaType/EmissionFactorsDataTypeApi.raml
+  Search: !include /DAtaType/SearchDataTypeApi.raml
+
+/emission-factors:
+  get:
+    description: Lists all available emission factors or queries with parameters such as category, source, region, year calculation_method, lca_activity or id to help determine what emission factors are available to be used in your estimation.
+    queryParameters:
+      year:
+        description: Filters emission factors by year factor was released
+        required: false
+        type: string
+      category:
+        description: Filters by emission factor category
+        required: false
+        type: string
+
+    responses:
+        200:
+          body:
+            application/json:
+              type: Climatiq[]
+              examples:
+                output: !include /DAtaType/1.0.1/Example/EmissionExample.raml
+        400:
+          body:
+            application/json:
+              examples:
+                message: Invalid request
+
+/emission-factors/categories:
+  get:
+    description: Returns a list of categories available for a given query.
+    queryParameters:
+      region:
+        description: Filters emission factors by geographic region to which it applies. You may specify an asterix (*) at the end of the region to act as a wildcard character, matching any regions, such as sub-regions, that begin with the string before the asterix..
+        required: false
+        type: string
+
+    responses:
+            200:
+              body:
+                application/json:
+                  example:
+                     output: !include /DAtaType/1.0.1/Example/CategoriesExampleApi.raml 
+
+/emission-factors/regions:
+  get:
+    description: Returns a list of categories available for a given query.
+    queryParameters:
+      region:
+        description: Filters emission factors by geographic region to which it applies. You may specify an asterix (*) at the end of the region to act as a wildcard character, matching any regions, such as sub-regions, that begin with the string before the asterix.
+        required: false
+        type: string
+      year:
+        description: Filters emission factors by year factor was released
+        required: false
+        type: string
+    responses:
+        200:
+          body:
+             application/json:
+                  example:
+                    output: !include /DAtaType/1.0.1/Example/RegionExampleApi.raml
+
+/search:
+  get:
+    description: Allows you to determine what emission factors are available to be used in your estimates.You can search for free-text queries with the query parameter, or filter by parameters such as category, source, region, year calculation_method, lca_activity or id
+    queryParameters:
+      sector:
+        description: Filters by emission factor sector.
+        required: false
+        type: string
+    responses:
+        200:
+          body:
+            application/json:
+              example:
+                output: !include /DAtaType/1.0.1/Example/SearchExampleApi.raml
+                
+                
+/emission-factors/years:
+  get:
+    description: This endpoint returns a list of years available for a given query.
+    responses:
+            200:
+              body:
+                application/json:
+                  example:
+                   output: !include /DAtaType/1.0.1/Example/YearsExzamplapi.raml
+                
+

@@ -1,0 +1,22 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  name: string 
+  category: string
+  sector: string 
+  source: string
+  uncertainty: string
+  year: string
+  region: string
+  region_name: string
+  description: string
+  unit_type:
+    type: object
+    required: false 
+    properties: 
+      type: string
+  factor?: boolean
+  factor_calculation_method: string
+  factor_calculation_origin: string
+  

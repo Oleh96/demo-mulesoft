@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Holiday (travel/accommodation)",
+        "category": "Accommodation",
+        "sector": "Restaurants and Accommodation",
+        "source": "BEIS",
+        "uncertainty": null,
+        "year": "2018",
+        "region": "GB",
+        "region_name": "United Kingdom",
+        "description": "Emission intensity of supply chain in GBP spend on: holiday in the uk/ holiday abroad/ room hire. In actual prices in £s and including VAT. Provided by BEIS/DEFRA in the official report on GHG Emissions of the UK between 1996-2018. Where source emission factors are identical across a variety of activities they have been grouped to avoid confusion - details are documented in the OEFDB data guidance.",
+        "unit_type": [
+            "Money"
+        ],
+        "factor": 0.425,
+        "factor_calculation_method": "ar4",
+        "factor_calculation_origin": "source",
+        "constituent_gases": {
+            "co2e_total": 0.425,
+            "co2e_other": null,
+            "co2": null,
+            "ch4": null,
+            "n2o": null
+        }
+    }
+]

@@ -1,0 +1,2125 @@
+{
+    "current_page": 1,
+    "last_page": 790,
+    "total_results": 15787,
+    "results": [
+        {
+            "activity_id": "accommodation_type_holiday",
+            "uuid": "5c37ee77-488d-4a21-83d7-7c06656eb0ff",
+            "id": "accommodation_type_holiday",
+            "name": "Holiday (travel/accommodation)",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/statistics/uks-carbon-footprint",
+            "uncertainty": null,
+            "year": "2018",
+            "region": "GB",
+            "region_name": "United Kingdom",
+            "description": "Emission intensity of supply chain in GBP spend on: holiday in the uk/ holiday abroad/ room hire. In actual prices in £s and including VAT. Provided by BEIS/DEFRA in the official report on GHG Emissions of the UK between 1996-2018. Where source emission factors are identical across a variety of activities they have been grouped to avoid confusion - details are documented in the OEFDB data guidance.",
+            "unit_type": [
+                "Money"
+            ],
+            "unit": "kg/GBP",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 0.425,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 0.425,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_room",
+            "uuid": "1cd2252d-10b5-4734-afca-e463110235ef",
+            "id": "accommodation_type_hotel_room",
+            "name": "Hotel room",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "GHG Protocol",
+            "source_link": "https://quantis-suite.com/Scope-3-Evaluator/",
+            "uncertainty": null,
+            "year": "2017",
+            "region": "GLOBAL",
+            "region_name": "Global",
+            "description": "Emission intensity of supply chain (purchase of service/standard good/capital good) in US dollars spend on: hotel room. Factors retrieved from the Quantis+GHG Protocol Scope 3 Calculator for the year 2016 and apply for years beyond 2016. The same emission factor applies to different types of investments in joint ventures/subsidiaries/associate companies that were not captured in Scope 1 emissions.",
+            "unit_type": [
+                "Money"
+            ],
+            "unit": "kg/USD",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 0.463,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 0.463,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_room",
+            "uuid": "3c4f6a14-35a9-483a-b613-dec3098ac088",
+            "id": "accommodation_type_hotel_room",
+            "name": "Hotel room",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "GHG Protocol",
+            "source_link": "https://quantis-suite.com/Scope-3-Evaluator/",
+            "uncertainty": null,
+            "year": "2017",
+            "region": "GLOBAL",
+            "region_name": "Global",
+            "description": "Emission intensity of supply chain (purchase of service/standard good/capital good) in US dollars spend on: hotel room. Factors retrieved from the Quantis+GHG Protocol Scope 3 Calculator for the year 2016 and apply for years beyond 2016. The same emission factor applies to different types of investments in joint ventures/subsidiaries/associate companies that were not captured in Scope 1 emissions.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/person-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 17.98,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 17.98,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "d2b2f89f-1e74-4a4f-96ed-b9f6bcf4e960",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "AE",
+            "region_name": "United Arab Emirates",
+            "description": "Emission intensity of average hotel night in the United Arab Emirates. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 114.4,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 114.4,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "950961ac-cee7-4e48-9312-09a8ee08f02b",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "AE",
+            "region_name": "United Arab Emirates",
+            "description": "Emission intensity of average hotel night in the United Arab Emirates. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 63.8,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 63.8,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "1f0f240d-f592-438f-84fb-a7088f3deeae",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "AR",
+            "region_name": "Argentina",
+            "description": "Emission intensity of average hotel night in Argentina. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 56.0,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 56.0,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "a85f8b6b-1f32-4205-908e-a718df26dc84",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "AT",
+            "region_name": "Austria",
+            "description": "Emission intensity of average hotel night in Austria. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 13.9,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 13.9,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "25a80130-6ef1-4d68-a328-315285d969dc",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "AU",
+            "region_name": "Australia",
+            "description": "Emission intensity of average hotel night in Australia. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 42.6,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 42.6,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "f20ee532-0548-4204-a5ba-cb3a355c73b7",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "AU",
+            "region_name": "Australia",
+            "description": "Emission intensity of average hotel night in Australia. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 35.0,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 35.0,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "fcc31850-a30d-4247-a730-3d10736246dc",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "BE",
+            "region_name": "Belgium",
+            "description": "Emission intensity of average hotel night in Belgium. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 10.9,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 10.9,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "740c3612-709f-48ff-82ce-147d47e71063",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "BE",
+            "region_name": "Belgium",
+            "description": "Emission intensity of average hotel night in Belgium. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 12.2,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 12.2,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "0f36dc79-c4d8-4c8b-8df4-4e7d4aabf1c5",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "BR",
+            "region_name": "Brazil",
+            "description": "Emission intensity of average hotel night in Brazil. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 12.3,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 12.3,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "2b0f4f73-8343-4b3f-aeab-32c85ebac218",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "BR",
+            "region_name": "Brazil",
+            "description": "Emission intensity of average hotel night in Brazil. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 8.7,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 8.7,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "542f8525-32c6-4ca6-a598-acaf071474eb",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "CA",
+            "region_name": "Canada",
+            "description": "Emission intensity of average hotel night in Canada. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 16.1,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 16.1,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "04079067-3e28-4612-a370-048a58037972",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "CA",
+            "region_name": "Canada",
+            "description": "Emission intensity of average hotel night in Canada. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 7.4,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 7.4,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "f6727860-1439-4fa2-8b77-ecfa48c53cd8",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "CH",
+            "region_name": "Switzerland",
+            "description": "Emission intensity of average hotel night in Switzerland. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 7.4,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 7.4,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "ab01fa32-61c4-4bc7-a6a0-f6368fbe82d1",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "CH",
+            "region_name": "Switzerland",
+            "description": "Emission intensity of average hotel night in Switzerland. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 6.6,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 6.6,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "47c58f11-ef25-4ee7-80e0-ff5adbf3a993",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "CL",
+            "region_name": "Chile",
+            "description": "Emission intensity of average hotel night in Chile. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 30.5,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 30.5,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "283b839d-c1fb-42ef-bd8b-be0b233de9d3",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2022",
+            "uncertainty": null,
+            "year": "2022",
+            "region": "CL",
+            "region_name": "Chile",
+            "description": "Emission intensity of average hotel night in Chile. Retrieved from the Conversion Factors 2022: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 27.6,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 27.6,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        },
+        {
+            "activity_id": "accommodation_type_hotel_stay",
+            "uuid": "8c2e8697-8943-4a19-904e-42edb7ab69b0",
+            "id": "accommodation_type_hotel_stay",
+            "name": "Hotel stay",
+            "category": "Accommodation",
+            "sector": "Restaurants and Accommodation",
+            "source": "BEIS",
+            "source_link": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",
+            "uncertainty": null,
+            "year": "2021",
+            "region": "CN",
+            "region_name": "China",
+            "description": "Emission intensity of average hotel night in China. Retrieved from the Conversion Factors 2021: flat file published by the UK BEIS/Defra at the source URL.",
+            "unit_type": [
+                "Number"
+            ],
+            "unit": "kg/room-night",
+            "lca_activity": "unknown",
+            "data_quality_flags": [],
+            "access_type": "public",
+            "supported_calculation_methods": [
+                "ar4"
+            ],
+            "factor": 62.9,
+            "factor_calculation_method": "ar4",
+            "factor_calculation_origin": "source",
+            "constituent_gases": {
+                "co2e_total": 62.9,
+                "co2e_other": null,
+                "co2": null,
+                "ch4": null,
+                "n2o": null
+            }
+        }
+    ],
+    "possible_filters": {
+        "year": [
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008"
+        ],
+        "source": [
+            "ADEME",
+            "AIB",
+            "BEIS",
+            "CCF",
+            "CT",
+            "DEWA",
+            "DISER",
+            "EPA",
+            "EPPO",
+            "EXIOBASE",
+            "GEMIS",
+            "GHG Protocol",
+            "GLEC",
+            "HKEI",
+            "MfE",
+            "STC-Nestra B.V.",
+            "UBA",
+            "UNFCCC"
+        ],
+        "region": [
+            {
+                "id": "AE",
+                "name": "United Arab Emirates"
+            },
+            {
+                "id": "AE-DXB",
+                "name": "Dubai, DU, AE"
+            },
+            {
+                "id": "AF",
+                "name": "Afghanistan"
+            },
+            {
+                "id": "AL",
+                "name": "Albania"
+            },
+            {
+                "id": "AM",
+                "name": "Armenia"
+            },
+            {
+                "id": "AO",
+                "name": "Angola"
+            },
+            {
+                "id": "AR",
+                "name": "Argentina"
+            },
+            {
+                "id": "ASIA_AFRICA",
+                "name": "Asia and Africa"
+            },
+            {
+                "id": "AT",
+                "name": "Austria"
+            },
+            {
+                "id": "AU",
+                "name": "Australia"
+            },
+            {
+                "id": "AU-ACT",
+                "name": "Australian Capital Territory, AU"
+            },
+            {
+                "id": "AU-CBR",
+                "name": "Canberra, ACT, AU"
+            },
+            {
+                "id": "AU-MEL",
+                "name": "Melbourne, VIC, AU"
+            },
+            {
+                "id": "AU-NSW",
+                "name": "New South Wales, AU"
+            },
+            {
+                "id": "AU-NT",
+                "name": "Northern Territory, AU"
+            },
+            {
+                "id": "AU-QLD",
+                "name": "Queensland, AU"
+            },
+            {
+                "id": "AU-SA",
+                "name": "South Australia, AU"
+            },
+            {
+                "id": "AU-SYD",
+                "name": "Sydney, NSW, AU"
+            },
+            {
+                "id": "AU-TAS",
+                "name": "Tasmania, AU"
+            },
+            {
+                "id": "AU-VIC",
+                "name": "Victoria, AU"
+            },
+            {
+                "id": "AU-WA",
+                "name": "Western Australia, AU"
+            },
+            {
+                "id": "AZ",
+                "name": "Azerbaijan"
+            },
+            {
+                "id": "BA",
+                "name": "Bosnia and Herzegovina"
+            },
+            {
+                "id": "BD",
+                "name": "Bangladesh"
+            },
+            {
+                "id": "BE",
+                "name": "Belgium"
+            },
+            {
+                "id": "BE-GHI",
+                "name": "Saint-Ghislain, WHT, BE"
+            },
+            {
+                "id": "BG",
+                "name": "Bulgaria"
+            },
+            {
+                "id": "BH-AMH",
+                "name": "Al Manamah, 13, BH"
+            },
+            {
+                "id": "BJ",
+                "name": "Benin"
+            },
+            {
+                "id": "BL",
+                "name": "Saint Barthélemy"
+            },
+            {
+                "id": "BN",
+                "name": "Brunei Darussalam"
+            },
+            {
+                "id": "BO",
+                "name": "Bolivia"
+            },
+            {
+                "id": "BR",
+                "name": "Brazil"
+            },
+            {
+                "id": "BR-SAO",
+                "name": "São Paulo, SP, BR"
+            },
+            {
+                "id": "BW",
+                "name": "Botswana"
+            },
+            {
+                "id": "BY",
+                "name": "Belarus"
+            },
+            {
+                "id": "CA",
+                "name": "Canada"
+            },
+            {
+                "id": "CA-AB",
+                "name": "Alberta, CA"
+            },
+            {
+                "id": "CA-BC",
+                "name": "British Columbia, CA"
+            },
+            {
+                "id": "CA-MB",
+                "name": "Manitoba, CA"
+            },
+            {
+                "id": "CA-MTR",
+                "name": "Montreal, QC, CA"
+            },
+            {
+                "id": "CA-NB",
+                "name": "New Brunswick, CA"
+            },
+            {
+                "id": "CA-NL",
+                "name": "Newfoundland and Labrador, CA"
+            },
+            {
+                "id": "CA-NS",
+                "name": "Nova Scotia, CA"
+            },
+            {
+                "id": "CA-NT",
+                "name": "Northwest Territories, CA"
+            },
+            {
+                "id": "CA-NU",
+                "name": "Nunavut, CA"
+            },
+            {
+                "id": "CA-ON",
+                "name": "Ontario, CA"
+            },
+            {
+                "id": "CA-PE",
+                "name": "Prince Edward Island, CA"
+            },
+            {
+                "id": "CA-QC",
+                "name": "Quebec, CA"
+            },
+            {
+                "id": "CA-QUE",
+                "name": "Quebec, QC, CA"
+            },
+            {
+                "id": "CA-SK",
+                "name": "Saskatchewan, CA"
+            },
+            {
+                "id": "CA-TOR",
+                "name": "Toronto, ON, CA"
+            },
+            {
+                "id": "CA-YT",
+                "name": "Yukon, CA"
+            },
+            {
+                "id": "CD",
+                "name": "Congo, The Democratic Republic of the"
+            },
+            {
+                "id": "CG",
+                "name": "Congo"
+            },
+            {
+                "id": "CH",
+                "name": "Switzerland"
+            },
+            {
+                "id": "CH-ZRH",
+                "name": "Zurich, ZH, CH"
+            },
+            {
+                "id": "CI",
+                "name": "Côte d'Ivoire"
+            },
+            {
+                "id": "CL",
+                "name": "Chile"
+            },
+            {
+                "id": "CM",
+                "name": "Cameroon"
+            },
+            {
+                "id": "CN",
+                "name": "China"
+            },
+            {
+                "id": "CN-BJS",
+                "name": "Beijing, BJ, CN"
+            },
+            {
+                "id": "CN-C",
+                "name": "Central China grid, CN"
+            },
+            {
+                "id": "CN-E",
+                "name": "East China grid, CN"
+            },
+            {
+                "id": "CN-HI",
+                "name": "Hainan Sheng, CN"
+            },
+            {
+                "id": "CN-N",
+                "name": "North China grid, CN"
+            },
+            {
+                "id": "CN-NE",
+                "name": "China Northeast grid, CN"
+            },
+            {
+                "id": "CN-NW",
+                "name": "China Northwest grid, CN"
+            },
+            {
+                "id": "CN-NX",
+                "name": "Ningxia Huizu Zizhiqu, CN"
+            },
+            {
+                "id": "CN-S",
+                "name": "China Southern grid, CN"
+            },
+            {
+                "id": "CO",
+                "name": "Colombia"
+            },
+            {
+                "id": "CR",
+                "name": "Costa Rica"
+            },
+            {
+                "id": "CU",
+                "name": "Cuba"
+            },
+            {
+                "id": "CY",
+                "name": "Cyprus"
+            },
+            {
+                "id": "CZ",
+                "name": "Czech Republic"
+            },
+            {
+                "id": "DE",
+                "name": "Germany"
+            },
+            {
+                "id": "DE-FRA",
+                "name": "Frankfurt am Main, HE, DE"
+            },
+            {
+                "id": "DK",
+                "name": "Denmark"
+            },
+            {
+                "id": "DO",
+                "name": "Dominican Republic"
+            },
+            {
+                "id": "DZ",
+                "name": "Algeria"
+            },
+            {
+                "id": "EC",
+                "name": "Ecuador"
+            },
+            {
+                "id": "EE",
+                "name": "Estonia"
+            },
+            {
+                "id": "EG",
+                "name": "Egypt"
+            },
+            {
+                "id": "ER",
+                "name": "Eritrea"
+            },
+            {
+                "id": "ES",
+                "name": "Spain"
+            },
+            {
+                "id": "ET",
+                "name": "Ethiopia"
+            },
+            {
+                "id": "EU",
+                "name": "European Union"
+            },
+            {
+                "id": "EURASIA",
+                "name": "Europe and Eurasia"
+            },
+            {
+                "id": "EU_S_AMERICA",
+                "name": "Europe and South America"
+            },
+            {
+                "id": "FI",
+                "name": "Finland"
+            },
+            {
+                "id": "FI-HMN",
+                "name": "Fredrikshamn (Hamina), 09, FI"
+            },
+            {
+                "id": "FJ",
+                "name": "Fiji"
+            },
+            {
+                "id": "FR",
+                "name": "France"
+            },
+            {
+                "id": "FR-2A-FR-2B",
+                "name": "Corse-du-Sud, FR"
+            },
+            {
+                "id": "FR-OIA",
+                "name": "Corscia, 2B, FR"
+            },
+            {
+                "id": "FR-PAR",
+                "name": "Paris, 75, FR"
+            },
+            {
+                "id": "GA",
+                "name": "Gabon"
+            },
+            {
+                "id": "GB",
+                "name": "United Kingdom"
+            },
+            {
+                "id": "GB-CDF",
+                "name": "Cardiff, CRF, GB"
+            },
+            {
+                "id": "GB-LON",
+                "name": "London, LND, GB"
+            },
+            {
+                "id": "GE",
+                "name": "Georgia"
+            },
+            {
+                "id": "GF",
+                "name": "French Guiana"
+            },
+            {
+                "id": "GH",
+                "name": "Ghana"
+            },
+            {
+                "id": "GI",
+                "name": "Gibraltar"
+            },
+            {
+                "id": "GLOBAL",
+                "name": "Global"
+            },
+            {
+                "id": "GP",
+                "name": "Guadeloupe"
+            },
+            {
+                "id": "GR",
+                "name": "Greece"
+            },
+            {
+                "id": "GT",
+                "name": "Guatemala"
+            },
+            {
+                "id": "HK",
+                "name": "Hong Kong"
+            },
+            {
+                "id": "HK-HKG",
+                "name": "Hong Kong, HK"
+            },
+            {
+                "id": "HN",
+                "name": "Honduras"
+            },
+            {
+                "id": "HR",
+                "name": "Croatia"
+            },
+            {
+                "id": "HT",
+                "name": "Haiti"
+            },
+            {
+                "id": "HU",
+                "name": "Hungary"
+            },
+            {
+                "id": "ID",
+                "name": "Indonesia"
+            },
+            {
+                "id": "ID-JKT",
+                "name": "Jakarta, Java, JK, ID"
+            },
+            {
+                "id": "IE",
+                "name": "Ireland"
+            },
+            {
+                "id": "IE-DUB",
+                "name": "Dublin, IE"
+            },
+            {
+                "id": "IL",
+                "name": "Israel"
+            },
+            {
+                "id": "IN",
+                "name": "India"
+            },
+            {
+                "id": "IN-BOM",
+                "name": "Mumbai (ex Bombay), MH, IN"
+            },
+            {
+                "id": "IN-DEL",
+                "name": "Delhi, DL, IN"
+            },
+            {
+                "id": "IN-MAA",
+                "name": "Chennai (ex Madras), TN, IN"
+            },
+            {
+                "id": "IN-PNQ",
+                "name": "Pune, MH, IN"
+            },
+            {
+                "id": "IQ",
+                "name": "Iraq"
+            },
+            {
+                "id": "IR",
+                "name": "Iran, Islamic Republic of"
+            },
+            {
+                "id": "IS",
+                "name": "Iceland"
+            },
+            {
+                "id": "IT",
+                "name": "Italy"
+            },
+            {
+                "id": "IT-MIL",
+                "name": "Milano, IT"
+            },
+            {
+                "id": "JM",
+                "name": "Jamaica"
+            },
+            {
+                "id": "JO",
+                "name": "Jordan"
+            },
+            {
+                "id": "JP",
+                "name": "Japan"
+            },
+            {
+                "id": "JP-OSA",
+                "name": "Osaka, 27, JP"
+            },
+            {
+                "id": "JP-STM",
+                "name": "Saitama, 11, JP"
+            },
+            {
+                "id": "JP-TYO",
+                "name": "Tokyo, 13, JP"
+            },
+            {
+                "id": "KE",
+                "name": "Kenya"
+            },
+            {
+                "id": "KG",
+                "name": "Kyrgyzstan"
+            },
+            {
+                "id": "KH",
+                "name": "Cambodia"
+            },
+            {
+                "id": "KP",
+                "name": "Korea, Democratic People's Republic of"
+            },
+            {
+                "id": "KR",
+                "name": "Korea, Republic of"
+            },
+            {
+                "id": "KR-SEL",
+                "name": "Seoul, 11, KR"
+            },
+            {
+                "id": "KW",
+                "name": "Kuwait"
+            },
+            {
+                "id": "KZ",
+                "name": "Kazakhstan"
+            },
+            {
+                "id": "LATAM",
+                "name": "Latin America"
+            },
+            {
+                "id": "LK",
+                "name": "Sri Lanka"
+            },
+            {
+                "id": "LT",
+                "name": "Lithuania"
+            },
+            {
+                "id": "LU",
+                "name": "Luxembourg"
+            },
+            {
+                "id": "LV",
+                "name": "Latvia"
+            },
+            {
+                "id": "LY",
+                "name": "Libya"
+            },
+            {
+                "id": "MA",
+                "name": "Morocco"
+            },
+            {
+                "id": "MD",
+                "name": "Moldova, Republic of"
+            },
+            {
+                "id": "ME",
+                "name": "Montenegro"
+            },
+            {
+                "id": "MF",
+                "name": "Saint Martin (French Part)"
+            },
+            {
+                "id": "MK",
+                "name": "Macedonia, The former Yugoslav Republic of"
+            },
+            {
+                "id": "MM",
+                "name": "Myanmar"
+            },
+            {
+                "id": "MN",
+                "name": "Mongolia"
+            },
+            {
+                "id": "MO",
+                "name": "Macao"
+            },
+            {
+                "id": "MQ",
+                "name": "Martinique"
+            },
+            {
+                "id": "MT",
+                "name": "Malta"
+            },
+            {
+                "id": "MV",
+                "name": "Maldives"
+            },
+            {
+                "id": "MX",
+                "name": "Mexico"
+            },
+            {
+                "id": "MY",
+                "name": "Malaysia"
+            },
+            {
+                "id": "MZ",
+                "name": "Mozambique"
+            },
+            {
+                "id": "NA",
+                "name": "Namibia"
+            },
+            {
+                "id": "NG",
+                "name": "Nigeria"
+            },
+            {
+                "id": "NI",
+                "name": "Nicaragua"
+            },
+            {
+                "id": "NL",
+                "name": "Netherlands"
+            },
+            {
+                "id": "NL-EEM",
+                "name": "Eemshaven, NL"
+            },
+            {
+                "id": "NL-ZBD",
+                "name": "Middenmeer, NH, NL"
+            },
+            {
+                "id": "NO",
+                "name": "Norway"
+            },
+            {
+                "id": "NO-OSL",
+                "name": "Oslo, 03, NO"
+            },
+            {
+                "id": "NP",
+                "name": "Nepal"
+            },
+            {
+                "id": "NZ",
+                "name": "New Zealand"
+            },
+            {
+                "id": "NZ-WLG",
+                "name": "Wellington, WGN, NZ"
+            },
+            {
+                "id": "N_AMERICA",
+                "name": "North America"
+            },
+            {
+                "id": "OM",
+                "name": "Oman"
+            },
+            {
+                "id": "PA",
+                "name": "Panama"
+            },
+            {
+                "id": "PE",
+                "name": "Peru"
+            },
+            {
+                "id": "PF",
+                "name": "French Polynesia"
+            },
+            {
+                "id": "PF-FAA",
+                "name": "Tahiti Fa'a'à, PF"
+            },
+            {
+                "id": "PH",
+                "name": "Philippines"
+            },
+            {
+                "id": "PK",
+                "name": "Pakistan"
+            },
+            {
+                "id": "PL",
+                "name": "Poland"
+            },
+            {
+                "id": "PL-WAW",
+                "name": "Warszawa, 14, PL"
+            },
+            {
+                "id": "PM",
+                "name": "Saint Pierre and Miquelon"
+            },
+            {
+                "id": "PT",
+                "name": "Portugal"
+            },
+            {
+                "id": "PY",
+                "name": "Paraguay"
+            },
+            {
+                "id": "QA",
+                "name": "Qatar"
+            },
+            {
+                "id": "RE",
+                "name": "Reunion"
+            },
+            {
+                "id": "RO",
+                "name": "Romania"
+            },
+            {
+                "id": "ROW_WA",
+                "name": "Central Asia and Pacific Asia, Oceania, Antarctica"
+            },
+            {
+                "id": "ROW_WE",
+                "name": "East Europe and Iceland"
+            },
+            {
+                "id": "ROW_WF",
+                "name": "Africa except Egypt and South Africa"
+            },
+            {
+                "id": "ROW_WL",
+                "name": "Latin America except Brazil"
+            },
+            {
+                "id": "ROW_WM",
+                "name": "Middle East, Asia and Egypt"
+            },
+            {
+                "id": "RS",
+                "name": "Serbia"
+            },
+            {
+                "id": "RU",
+                "name": "Russian Federation"
+            },
+            {
+                "id": "SA",
+                "name": "Saudi Arabia"
+            },
+            {
+                "id": "SD",
+                "name": "Sudan"
+            },
+            {
+                "id": "SE",
+                "name": "Sweden"
+            },
+            {
+                "id": "SE-STO",
+                "name": "Stockholm, AB, SE"
+            },
+            {
+                "id": "SG",
+                "name": "Singapore"
+            },
+            {
+                "id": "SG-SIN",
+                "name": "Singapore, SG"
+            },
+            {
+                "id": "SI",
+                "name": "Slovenia"
+            },
+            {
+                "id": "SK",
+                "name": "Slovakia"
+            },
+            {
+                "id": "SN",
+                "name": "Senegal"
+            },
+            {
+                "id": "SV",
+                "name": "El Salvador"
+            },
+            {
+                "id": "SY",
+                "name": "Syrian Arab Republic"
+            },
+            {
+                "id": "TG",
+                "name": "Togo"
+            },
+            {
+                "id": "TH",
+                "name": "Thailand"
+            },
+            {
+                "id": "TJ",
+                "name": "Tajikistan"
+            },
+            {
+                "id": "TM",
+                "name": "Turkmenistan"
+            },
+            {
+                "id": "TN",
+                "name": "Tunisia"
+            },
+            {
+                "id": "TR",
+                "name": "Turkey"
+            },
+            {
+                "id": "TT",
+                "name": "Trinidad and Tobago"
+            },
+            {
+                "id": "TW",
+                "name": "Taiwan, Province of China"
+            },
+            {
+                "id": "TZ",
+                "name": "Tanzania, United Republic of"
+            },
+            {
+                "id": "UA",
+                "name": "Ukraine"
+            },
+            {
+                "id": "US",
+                "name": "United States"
+            },
+            {
+                "id": "US-AK",
+                "name": "Alaska, US"
+            },
+            {
+                "id": "US-AKGD",
+                "name": "ASCC Alaska Grid, US"
+            },
+            {
+                "id": "US-AKMS",
+                "name": "ASCC Miscellaneous, US"
+            },
+            {
+                "id": "US-AL",
+                "name": "Alabama, US"
+            },
+            {
+                "id": "US-AR",
+                "name": "Arkansas, US"
+            },
+            {
+                "id": "US-AZ",
+                "name": "Arizona, US"
+            },
+            {
+                "id": "US-AZNM",
+                "name": "WECC Southwest, US"
+            },
+            {
+                "id": "US-CA",
+                "name": "California, US"
+            },
+            {
+                "id": "US-CAMX",
+                "name": "WECC California, US"
+            },
+            {
+                "id": "US-CO",
+                "name": "Colorado, US"
+            },
+            {
+                "id": "US-CT",
+                "name": "Connecticut, US"
+            },
+            {
+                "id": "US-DC",
+                "name": "District of Columbia, US"
+            },
+            {
+                "id": "US-DE",
+                "name": "Delaware, US"
+            },
+            {
+                "id": "US-ERCT",
+                "name": "ERCOT All, US"
+            },
+            {
+                "id": "US-FL",
+                "name": "Florida, US"
+            },
+            {
+                "id": "US-FRCC",
+                "name": "FRCC All, US"
+            },
+            {
+                "id": "US-GA",
+                "name": "Georgia, US"
+            },
+            {
+                "id": "US-GIR",
+                "name": "Gilroy, CA, US"
+            },
+            {
+                "id": "US-HI",
+                "name": "Hawaii, US"
+            },
+            {
+                "id": "US-HIMS",
+                "name": "HICC Miscellaneous, US"
+            },
+            {
+                "id": "US-HIOA",
+                "name": "HICC Oahu, US"
+            },
+            {
+                "id": "US-IA",
+                "name": "Iowa, US"
+            },
+            {
+                "id": "US-ID",
+                "name": "Idaho, US"
+            },
+            {
+                "id": "US-IL",
+                "name": "Illinois, US"
+            },
+            {
+                "id": "US-IN",
+                "name": "Indiana, US"
+            },
+            {
+                "id": "US-KS",
+                "name": "Kansas, US"
+            },
+            {
+                "id": "US-KY",
+                "name": "Kentucky, US"
+            },
+            {
+                "id": "US-LA",
+                "name": "Louisiana, US"
+            },
+            {
+                "id": "US-LAS",
+                "name": "Las Vegas, NV, US"
+            },
+            {
+                "id": "US-LAX",
+                "name": "Los Angeles, CA, US"
+            },
+            {
+                "id": "US-MA",
+                "name": "Massachusetts, US"
+            },
+            {
+                "id": "US-MD",
+                "name": "Maryland, US"
+            },
+            {
+                "id": "US-ME",
+                "name": "Maine, US"
+            },
+            {
+                "id": "US-MI",
+                "name": "Michigan, US"
+            },
+            {
+                "id": "US-MN",
+                "name": "Minnesota, US"
+            },
+            {
+                "id": "US-MO",
+                "name": "Missouri, US"
+            },
+            {
+                "id": "US-MROE",
+                "name": "MRO East, US"
+            },
+            {
+                "id": "US-MROW",
+                "name": "MRO West, US"
+            },
+            {
+                "id": "US-MS",
+                "name": "Mississippi, US"
+            },
+            {
+                "id": "US-MT",
+                "name": "Montana, US"
+            },
+            {
+                "id": "US-NC",
+                "name": "North Carolina, US"
+            },
+            {
+                "id": "US-ND",
+                "name": "North Dakota, US"
+            },
+            {
+                "id": "US-NE",
+                "name": "Nebraska, US"
+            },
+            {
+                "id": "US-NEWE",
+                "name": "NPCC New England, US"
+            },
+            {
+                "id": "US-NH",
+                "name": "New Hampshire, US"
+            },
+            {
+                "id": "US-NJ",
+                "name": "New Jersey, US"
+            },
+            {
+                "id": "US-NM",
+                "name": "New Mexico, US"
+            },
+            {
+                "id": "US-NV",
+                "name": "Nevada, US"
+            },
+            {
+                "id": "US-NWPP",
+                "name": "WECC Northwest, US"
+            },
+            {
+                "id": "US-NY",
+                "name": "New York, US"
+            },
+            {
+                "id": "US-NYCW",
+                "name": "NPCC NYC/Westchester, US"
+            },
+            {
+                "id": "US-NYLI",
+                "name": "NPCC Long Island, US"
+            },
+            {
+                "id": "US-NYUP",
+                "name": "NPCC Upstate NY, US"
+            },
+            {
+                "id": "US-OH",
+                "name": "Ohio, US"
+            },
+            {
+                "id": "US-OK",
+                "name": "Oklahoma, US"
+            },
+            {
+                "id": "US-OR",
+                "name": "Oregon, US"
+            },
+            {
+                "id": "US-PA",
+                "name": "Pennsylvania, US"
+            },
+            {
+                "id": "US-PR",
+                "name": "Puerto Rico (see also separate entry under PR), US"
+            },
+            {
+                "id": "US-RFCE",
+                "name": "RFC East, US"
+            },
+            {
+                "id": "US-RFCM",
+                "name": "RFC Michigan, US"
+            },
+            {
+                "id": "US-RFCW",
+                "name": "RFC West, US"
+            },
+            {
+                "id": "US-RI",
+                "name": "Rhode Island, US"
+            },
+            {
+                "id": "US-RMPA",
+                "name": "WECC Rockies, US"
+            },
+            {
+                "id": "US-SC",
+                "name": "South Carolina, US"
+            },
+            {
+                "id": "US-SD",
+                "name": "South Dakota, US"
+            },
+            {
+                "id": "US-SLC",
+                "name": "Salt Lake City, UT, US"
+            },
+            {
+                "id": "US-SPNO",
+                "name": "SPP North, US"
+            },
+            {
+                "id": "US-SPSO",
+                "name": "SPP South, US"
+            },
+            {
+                "id": "US-SRMV",
+                "name": "SERC Mississippi Valley, US"
+            },
+            {
+                "id": "US-SRMW",
+                "name": "SERC Midwest, US"
+            },
+            {
+                "id": "US-SRSO",
+                "name": "SERC South, US"
+            },
+            {
+                "id": "US-SRTV",
+                "name": "SERC Tennessee Valley, US"
+            },
+            {
+                "id": "US-SRVC",
+                "name": "SERC Virginia/Carolina, US"
+            },
+            {
+                "id": "US-TN",
+                "name": "Tennessee, US"
+            },
+            {
+                "id": "US-TX",
+                "name": "Texas, US"
+            },
+            {
+                "id": "US-UT",
+                "name": "Utah, US"
+            },
+            {
+                "id": "US-VA",
+                "name": "Virginia, US"
+            },
+            {
+                "id": "US-VT",
+                "name": "Vermont, US"
+            },
+            {
+                "id": "US-WA",
+                "name": "Washington, US"
+            },
+            {
+                "id": "US-WI",
+                "name": "Wisconsin, US"
+            },
+            {
+                "id": "US-WV",
+                "name": "West Virginia, US"
+            },
+            {
+                "id": "US-WY",
+                "name": "Wyoming, US"
+            },
+            {
+                "id": "UY",
+                "name": "Uruguay"
+            },
+            {
+                "id": "UZ",
+                "name": "Uzbekistan"
+            },
+            {
+                "id": "VE",
+                "name": "Venezuela"
+            },
+            {
+                "id": "VN",
+                "name": "Viet Nam"
+            },
+            {
+                "id": "YE",
+                "name": "Yemen"
+            },
+            {
+                "id": "YT",
+                "name": "Mayotte"
+            },
+            {
+                "id": "ZA",
+                "name": "South Africa"
+            },
+            {
+                "id": "ZA-CPT",
+                "name": "Cape Town, WC, ZA"
+            },
+            {
+                "id": "ZA-HDL",
+                "name": "Heriotdale/Johannesburg, ZA"
+            },
+            {
+                "id": "ZM",
+                "name": "Zambia"
+            },
+            {
+                "id": "ZW",
+                "name": "Zimbabwe"
+            }
+        ],
+        "category": [
+            "Accommodation",
+            "Agriculture/Hunting/Forestry/Fishing",
+            "Air Freight",
+            "Air Travel",
+            "Arable Farming",
+            "Building Materials",
+            "Ceramic Goods",
+            "Chemical Products",
+            "Clothing and Footwear",
+            "Cloud Computing - CPU",
+            "Cloud Computing - Memory",
+            "Cloud Computing - Networking",
+            "Cloud Computing - Storage",
+            "Construction",
+            "Construction Waste",
+            "Consumer Goods Rental",
+            "DIY and Gardening Equipment",
+            "Domestic Services",
+            "Domestic services",
+            "Education",
+            "Electrical Equipment",
+            "Electrical Waste",
+            "Electricity",
+            "Electronics",
+            "Energy Services",
+            "Equipment Rental",
+            "Equipment Repair",
+            "Fabricated Metal Products",
+            "Financial Services",
+            "Fishing/Aquaculture/Hunting",
+            "Food and Beverage Services",
+            "Food and Organic Waste",
+            "Food/Beverages/Tobacco",
+            "Fuel",
+            "Furnishings and Household",
+            "General Retail",
+            "General Waste",
+            "Glass Waste",
+            "Glass and Glass Products",
+            "Government Activities",
+            "Health Care",
+            "Health and Social Care",
+            "Heat and Steam",
+            "Homeworking",
+            "Housing",
+            "Information and Communication Services",
+            "Infrastructure",
+            "Insurance Services",
+            "Livestock Farming",
+            "Machinery",
+            "Maintenance and Repair",
+            "Manufacturing",
+            "Metal Waste",
+            "Metals",
+            "Mined Materials",
+            "Mining",
+            "Non-profit Activities",
+            "Office Equipment",
+            "Office equipment",
+            "Operational Activities",
+            "Organic Products",
+            "Organizational Activities",
+            "Other Materials",
+            "Paper Products",
+            "Paper and Cardboard",
+            "Paper and Cardboard Waste",
+            "Pavement and Surfacing",
+            "Personal Care and Accessories",
+            "Plastic Waste",
+            "Plastics and Rubber Products",
+            "Professional Services and Activities",
+            "Professional services",
+            "Rail Freight",
+            "Rail Travel",
+            "Real Estate",
+            "Recreation and Culture",
+            "Refrigerants and Fugitive Gases",
+            "Restaurants and Accommodation",
+            "Road Freight",
+            "Road Travel",
+            "Sea Freight",
+            "Sea Travel",
+            "Social Care",
+            "Textiles",
+            "Tickets and Passes",
+            "Timber and Forestry Products",
+            "Transport Services and Warehousing",
+            "Utilities",
+            "Vehicle Maintenance and Services",
+            "Vehicle Parts",
+            "Vehicles",
+            "Waste Management",
+            "Water Supply",
+            "Water Treatment",
+            "Wholesale Trade"
+        ],
+        "sector": [
+            "Agriculture/Hunting/Forestry/Fishing",
+            "Buildings and Infrastructure",
+            "Consumer Goods and Services",
+            "Education",
+            "Energy",
+            "Equipment",
+            "Health and Social Care",
+            "Information and Communication",
+            "Insurance and Financial Services",
+            "Materials and Manufacturing",
+            "Organizational Activities",
+            "Refrigerants and Fugitive Gases",
+            "Restaurants and Accommodation",
+            "Transport",
+            "Waste",
+            "Water"
+        ],
+        "unit_type": [
+            "Data",
+            "DataOverTime",
+            "Distance",
+            "Energy",
+            "Money",
+            "Number",
+            "NumberOverTime",
+            "PassengerOverDistance",
+            "Volume",
+            "Weight",
+            "WeightOverDistance",
+            "Time"
+        ]
+    }
+}
